@@ -11,6 +11,7 @@ class xyko::server inherits xyko::common {
 	create_user { teste:
 		usuario  => "$usuario_projeto",
 		password => "$usuario_senha_projeto",
+		uid		 => "$usuario_uid"
 	}
 
 
