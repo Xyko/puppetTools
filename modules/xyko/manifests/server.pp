@@ -9,9 +9,12 @@ class xyko::server inherits xyko::common {
 	}
 
 	create_user { teste:
-		usuario  => "$usuario_projeto",
-		password => "$usuario_senha_projeto",
-		uid		 => "$usuario_uid"
+        usuario     => "flipper",
+        grupo       => "flipper",
+        uid         => "13100",
+        gid         => "13100",
+        password    => "flipper",
+        home_dir	=> "/home/flipper"
 	}
 
 
