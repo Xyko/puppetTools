@@ -53,20 +53,4 @@ define create_user(
         require     => Group[$grupox,$grupos],
     }
 
-    ## COLOQUEI PQ SE O USUARIO NAO PODE SER AUTENTICAR ELE NAO PRECISA DAS CHAVES, NE ? (NAO TEM HOME DIR)
-    if ( ( $shell != $nologin ) and ( $mkhome != false ) ) {
-        file {"$myhome/.ssh":
-            ensure  => directory,
-            owner   => $usuario,
-            group   => $grupox,
-            mode    => "700",
-            require => User["${usuario}"],
-        }
-
-        user_keys {"${usuario}_keys":
-            usuario     => $usuario,
-            home_dir    => $myhome,
-            require     => File["$myhome/.ssh"],
-        }
-    }
 }
