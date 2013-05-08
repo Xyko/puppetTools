@@ -7,5 +7,4 @@ class xyko::common {
 	$usuario_nginx		= "nobody"
 	$grupo_nginx		= "nobody"
 
-
 }
