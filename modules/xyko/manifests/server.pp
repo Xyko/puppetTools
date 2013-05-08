@@ -8,6 +8,8 @@ class xyko::server inherits xyko::common {
 		source => "puppet:///modules/xyko/teste.txt";
 	}
 
-
+    # Usuário do projeto
+    include supso::users
+    Supso::Users::Create <| user == 'portal' |>
 
 }
