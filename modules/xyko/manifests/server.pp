@@ -1,9 +1,9 @@
 class xyko::server inherits xyko::common {
 
 	file {
-	"/etc/teste.txt":
+	"/etc/${projeto}.txt":
 		ensure => file,
-		source => "puppet:///modules/xyko/${projeto}.txt";
+		source => "puppet:///modules/xyko/teste.txt";
 	}
 
 }
