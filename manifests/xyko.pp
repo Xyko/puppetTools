@@ -1,4 +1,4 @@
 node default {
-	include supso
+	include supso::users
 	include xyko::server
 }
