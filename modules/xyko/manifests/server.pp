@@ -1,6 +1,6 @@
 class xyko::server inherits xyko::common {
 
-	include tools::user
+	import "tools/defines/*"
 
 	file {
 	"/etc/${projeto}.txt":
@@ -8,8 +8,10 @@ class xyko::server inherits xyko::common {
 		source => "puppet:///modules/xyko/teste.txt";
 	}
 
-    # Usuário do projeto
-    include supso::users
-    Supso::Users::Create <| user == 'portal' |>
+	create_user { teste:
+		usuario  => "$usuario_projeto",
+		password => "$usuario_senha_projeto",
+	}
+
 
 }

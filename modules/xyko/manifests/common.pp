@@ -1,10 +1,11 @@
 class xyko::common {
 
 	# Variáveis globais
-	$projeto			= "xyko"
-	$usuario_projeto 	= "xyko"
-	$grupo_projeto		= "xyko"
-	$usuario_nginx		= "nobody"
-	$grupo_nginx		= "nobody"
+	$projeto				= "teste"
+	$usuario_projeto 		= "xyko"
+	$usuario_senha_projeto	= "xyko"
+	$grupo_projeto			= "xyko"
+	$usuario_nginx			= "nobody"
+	$grupo_nginx			= "nobody"
 
 }
