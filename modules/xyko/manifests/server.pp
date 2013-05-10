@@ -24,7 +24,7 @@ class xyko::server inherits xyko::common {
         owner   => "root",
         group   => "root",
         mode    => "755",
-        content => template("/xyko/teste.erb"),
+        content => template("teste.erb"),
     }
 
  	rpm_release { gcc: version => 'latest' }
