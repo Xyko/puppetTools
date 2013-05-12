@@ -24,10 +24,16 @@ class xyko::server inherits xyko::common {
         owner   => "root",
         group   => "root",
         mode    => "755",
-        content => template("teste.erb"),
+        content => template("xyko/teste.erb"),
     }
 
- 	rpm_release { gcc: version => 'latest' }
+    rpm_release { ant: version => 'latest' }
+
+    rpm_release { teste: version => 'latest'}
+
+    package { "teste":
+    source => "puppet:///tools/files/solr_generic_globo-4.2.1-2.el5.noarch.rpm"
+    } 
 
 
 }
