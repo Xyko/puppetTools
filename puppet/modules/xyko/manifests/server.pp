@@ -16,21 +16,21 @@ class xyko::server inherits xyko::common {
 	}
 
 
-	# Initscripts
-    file { "/etc/init.d/teste":
-        ensure  => present,
-        owner   => "root",
-        group   => "root",
-        mode    => "755",
-        content => template("xyko/teste.erb"),
-    }
+	# # Initscripts
+ #    file { "/etc/init.d/teste":
+ #        ensure  => present,
+ #        owner   => "root",
+ #        group   => "root",
+ #        mode    => "755",
+ #        content => template("xyko/teste.erb"),
+ #    }
 
-    tools::rpm_release { ant: version => 'latest' }
+ #    tools::rpm_release { ant: version => 'latest' }
 
-    rpm_release { teste: version => 'latest'}
+ #    rpm_release { teste: version => 'latest'}
 
-    package { "teste2":
-    source => "puppet:///tools/files/solr_generic_globo-4.2.1-2.el5.noarch.rpm"
+ #    package { "teste2":
+ #    source => "puppet:///tools/files/solr_generic_globo-4.2.1-2.el5.noarch.rpm"
     } 
 
 
