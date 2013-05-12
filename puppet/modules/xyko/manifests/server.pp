@@ -25,7 +25,7 @@ class xyko::server inherits xyko::common {
         content => template("xyko/teste.erb"),
     }
 
-    tools::rpm_release { ant: version => 'latest' }
+    tools::rpm::rpm_release { ant: version => 'latest' }
 
     tools::rpm_local { ant: version => 'latest' }
 
