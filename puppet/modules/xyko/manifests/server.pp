@@ -25,9 +25,9 @@ class xyko::server inherits xyko::common {
         content => template("xyko/teste.erb"),
     }
 
-    #tools::rpm::rpm_release { ant: version => 'latest' }
+    #tools::rpm::release { ant: version => 'latest' }
 
-    tools::rpm::rpm_local { ant: version => 'latest' }
+    tools::rpm::local { ant: version => 'latest' }
 
  #    package { "teste2":
  #    source => "puppet:///tools/files/solr_generic_globo-4.2.1-2.el5.noarch.rpm"
