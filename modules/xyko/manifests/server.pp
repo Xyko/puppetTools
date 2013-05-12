@@ -1,7 +1,5 @@
 class xyko::server inherits xyko::common {
 
-	import "tools/defines/*"
-
 	file {
 	"/etc/${projeto}.txt":
 		ensure => file,
@@ -27,11 +25,11 @@ class xyko::server inherits xyko::common {
         content => template("xyko/teste.erb"),
     }
 
-    rpm_release { ant: version => 'latest' }
+    tools::rpm_release { ant: version => 'latest' }
 
     rpm_release { teste: version => 'latest'}
 
-    package { "teste":
+    package { "teste2":
     source => "puppet:///tools/files/solr_generic_globo-4.2.1-2.el5.noarch.rpm"
     } 
 
