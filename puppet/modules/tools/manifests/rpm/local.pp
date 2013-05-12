@@ -1,8 +1,7 @@
-define tools::rpm::local( $package=false ) {
-    $pkg = $package ? {
-        false   => $name,
-        default => $package,
-    }
+define tools::rpm::local( $pack_name ) {
+
+
+puts $pack_name
 
 
    #  package { $package:
