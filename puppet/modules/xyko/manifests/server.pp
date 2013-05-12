@@ -16,14 +16,14 @@ class xyko::server inherits xyko::common {
 	}
 
 
-	# # Initscripts
- #    file { "/etc/init.d/teste":
- #        ensure  => present,
- #        owner   => "root",
- #        group   => "root",
- #        mode    => "755",
- #        content => template("xyko/teste.erb"),
- #    }
+	# Initscripts
+    file { "/etc/init.d/teste":
+        ensure  => present,
+        owner   => "root",
+        group   => "root",
+        mode    => "755",
+        content => template("xyko/teste.erb"),
+    }
 
  #    tools::rpm_release { ant: version => 'latest' }
 
