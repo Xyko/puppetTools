@@ -1,11 +1,3 @@
-#
-# Sugestão de uso:
-#
-# class rpm::solr_generic_globo-3.3.0-1 {
-#     rpm_release { solr_generic_globo: version => "3.3.0-1" }
-# }
-#
-
 define tools::rpm::rpm_release( $package=false, $version ) {
     $pkg = $package ? {
         false   => $name,
@@ -38,5 +30,3 @@ define tools::rpm::rpm_release( $package=false, $version ) {
 
     package { $pkg: ensure => "$ensure" }
 }
-
-# EOF
