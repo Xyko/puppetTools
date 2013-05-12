@@ -1,10 +1,10 @@
 class xyko::server inherits xyko::common {
 
-	# file {
-	# "/etc/${projeto}.txt":
-	# 	ensure => file,
-	# 	source => "puppet:///modules/xyko/teste.txt";
-	# }
+	file {
+	"/etc/${projeto}.txt":
+		ensure => file,
+		source => "puppet:///modules/xyko/teste.txt";
+	}
 
 	tools::users::create { teste:
         usuario     => "flipper2",
