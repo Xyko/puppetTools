@@ -1,4 +1,4 @@
-define tools::rpm::rpm_release( $package=false, $version ) {
+define tools::rpm::release( $package=false, $version ) {
     $pkg = $package ? {
         false   => $name,
         default => $package,
