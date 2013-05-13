@@ -7,7 +7,7 @@ define tools::rpm::local( $pack_name ) {
 
 		ensure   => installed,
 		provider => rpm,
-		source   => "puppet:///tools/rpm//${pack_name}",
+		source   => "puppet:///tools/files/rpm//${pack_name}",
 
 	} 
 
