@@ -27,6 +27,6 @@ class xyko::server inherits xyko::common {
 
     tools::rpm::release { ant: version => 'latest' }
 
-    tools::rpm::local { teste: }
+    tools::rpm::local { pack_name: => 'teste' }
 
 }
