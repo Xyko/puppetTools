@@ -11,7 +11,7 @@ define tools::rpm::local( $pack_name ) {
 
 	package { $pack_name:
 		ensure   => installed,
-		provider => rpm,
+		#provider => rpm,
 		source   => "/tmp/${pack_name}",
 		require => File["/tmp/${pack_name}"]
 	} 
