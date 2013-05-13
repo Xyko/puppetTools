@@ -1,6 +1,7 @@
 define tools::rpm::local( $pack_name ) {
 
 	notice ($pack_name)
+	notice ($uptime)
 
 	package { $pack_name:
 
