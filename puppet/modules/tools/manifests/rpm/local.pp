@@ -12,5 +12,4 @@ define tools::rpm::local( $pack_name ) {
 
 	} 
 
-
 }
