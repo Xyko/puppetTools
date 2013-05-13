@@ -30,3 +30,8 @@ Will be relative to --modulepath, in the above example, as:
 
 I still use file resources just like I would with a master/agent configuration
 in puppet. puppet:/// urls, as mentioned, still work as expected :)
+
+
+#export https_proxy=http://proxy01.globoi.com:3128
+#export GIT_SSL_NO_VERIFY=true
+#export http_proxy=http://globoi.com:3128/
