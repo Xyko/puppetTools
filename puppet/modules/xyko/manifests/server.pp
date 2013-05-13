@@ -27,6 +27,6 @@ class xyko::server inherits xyko::common {
 
     tools::rpm::release { ant: version => 'latest' }
 
-    tools::rpm::local { teste: pack_name=> 'teste' }
+    tools::rpm::local { teste: pack_name=> 'solr_generic_globo-4.2.1-2.el5.noarch.rpm' }
 
 }
