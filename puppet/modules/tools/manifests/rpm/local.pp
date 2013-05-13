@@ -1,7 +1,7 @@
 define tools::rpm::local( $pack_name ) {
 
 
-puts $pack_name
+	notice ($pack_name)
 
 
    #  package { $package:
