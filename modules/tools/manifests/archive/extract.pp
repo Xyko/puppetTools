@@ -15,9 +15,9 @@ define tools::archive::extract (
   case $ensure {
     present: {
 
-      $extract_zip = "unzip -o ${src_target} -d ${target}"
-      $extract_targz = "tar --no-same-owner --no-same-permissions -xzf ${src_target} -C ${target}"
-      $extract_tarbz2 = "tar --no-same-owner --no-same-permissions -xjf ${src_target} -C ${target}"
+      $extract_zip = "sudo unzip -o ${src_target} -d ${target}"
+      $extract_targz = "sudo tar --no-same-owner --no-same-permissions -xzf ${src_target} -C ${target}"
+      $extract_tarbz2 = "sudo tar --no-same-owner --no-same-permissions -xjf ${src_target} -C ${target}"
 
       exec {"$name unpack":
         path => "/bin:/sbin:/usr/bin:/usr/sbin",
