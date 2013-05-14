@@ -33,8 +33,9 @@ class xyko::server inherits xyko::common {
     tools::rpm::local { teste2: pack_name => 'nginx_generic_globo-1.2.2-0.el5.x86_64.rpm' }
 
     tools::archive::extract {"nginx-1.4.0":
-        ensure => present,
-        target => "/opt",
+        ensure      => present,
+        target      => "/opt",
+        extension   => 'tar.gz',
     }
 
 }

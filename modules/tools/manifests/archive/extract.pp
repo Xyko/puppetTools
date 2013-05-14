@@ -1,16 +1,16 @@
 define tools::archive::extract (
   $target,
   $ensure=present,
-  $src_target="puppet:///modules/tools/${name}",
-  $root_dir='',
   $extension='tar.gz',
   $timeout=120) {
 
-  if $root_dir != '' {
-    $extract_dir = "${target}/${root_dir}"
-  } else {
-    $extract_dir = "${target}/${name}"
+  file { "/tmp/${name}.${extension}":
+    ensure => file,
+    source => "puppet:///modules/tools/${name}/${name}.${extension}",
   }
+
+  $extract_dir  = "${target}/${name}"
+  $src_target   = "/tmp/${name}.${extension}"
 
   case $ensure {
     present: {
