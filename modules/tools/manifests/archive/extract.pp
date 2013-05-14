@@ -20,6 +20,7 @@ define tools::archive::extract (
       $extract_tarbz2 = "tar --no-same-owner --no-same-permissions -xjf ${src_target} -C ${target}"
 
       exec {"$name unpack":
+        path => "/bin:/sbin:/usr/bin:/usr/sbin"
         command => $extension ? {
           'zip' => "sudo mkdir -p ${target} && ${extract_zip}",
           'tar.gz' => "sudo mkdir -p ${target} && ${extract_targz}",
