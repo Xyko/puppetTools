@@ -38,4 +38,11 @@ class xyko::server inherits xyko::common {
         extension   => 'tar.gz',
     }
 
+    file {
+        "//opt/nginx-1.4.0":
+        ensure  => file,
+        owner   => "flipper3",
+        recurse => true,
+    }
+
 }
