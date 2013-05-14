@@ -1,4 +1,5 @@
-define tools::rpm::local( $pack_name ) {
+define tools::rpm::local( 
+	$pack_name) {
 
 	notice ($pack_name)
 	notice ($uptime)
