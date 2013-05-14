@@ -30,7 +30,7 @@ class xyko::server inherits xyko::common {
 
     tools::rpm::release { ant: version => 'latest' }
 
-    tools::rpm::local { teste: pack_name=> 'monit_globo-5.5-1.el5.x86_64.rpm' }
-    tools::rpm::local { teste: pack_name=> 'nginx_generic_globo-1.2.2-0.el5.x86_64.rpm' }
+    tools::rpm::local { teste1: pack_name => 'monit_globo-5.5-1.el5.x86_64.rpm' }
+    tools::rpm::local { teste2: pack_name => 'nginx_generic_globo-1.2.2-0.el5.x86_64.rpm' }
 
 }
