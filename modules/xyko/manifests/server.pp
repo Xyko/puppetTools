@@ -1,6 +1,7 @@
 class xyko::server inherits xyko::common {
 
     include stdlib
+    include rvm
 
     notice is_ip_address('190.10.3a.3')
 
@@ -41,10 +42,12 @@ class xyko::server inherits xyko::common {
     }
 
     file { "/opt/nginx-1.4.0":
-      ensure => directory,
-      owner => "flipper3",
-      group => "flipper3",
-      recurse=>true,
+      ensure    => directory,
+      owner     => "flipper3",
+      group     => "flipper3",
+      recurse   => true,
     }
+
+
 
 }
