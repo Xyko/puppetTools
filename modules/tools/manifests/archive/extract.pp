@@ -15,9 +15,9 @@ define tools::archive::extract (
   case $ensure {
     present: {
 
-      $extract_zip = "unzip -o ${src_target}/${name}.${extension} -d ${target}"
-      $extract_targz = "tar --no-same-owner --no-same-permissions -xzf ${src_target}/${name}.${extension} -C ${target}"
-      $extract_tarbz2 = "tar --no-same-owner --no-same-permissions -xjf ${src_target}/${name}.${extension} -C ${target}"
+      $extract_zip = "unzip -o ${src_target} -d ${target}"
+      $extract_targz = "tar --no-same-owner --no-same-permissions -xzf ${src_target} -C ${target}"
+      $extract_tarbz2 = "tar --no-same-owner --no-same-permissions -xjf ${src_target} -C ${target}"
 
       exec {"$name unpack":
         command => $extension ? {
