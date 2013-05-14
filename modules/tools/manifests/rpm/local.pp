@@ -6,7 +6,7 @@ define tools::rpm::local( $pack_name ) {
 	file {
 	"/tmp/${pack_name}":
 		ensure => file,
-		source => "puppet:///modules/tools/rpm/${pack_name}",
+		source => "puppet:///rpm/${pack_name}",
 	}
 
 	package { $pack_name:
