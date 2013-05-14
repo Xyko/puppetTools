@@ -10,19 +10,14 @@ class xyko::server inherits xyko::common {
 		source => "puppet:///modules/xyko/teste.txt";
 	}
 
-	# tools::users::create { teste:
- #        usuario     => "flipper2",
- #        grupo       => "flipper2",
- #        uid         => "13101",
- #        gid         => "13101",
- #        password    => "flipper2",
- #        home_dir	=> "/home/flipper2"
-	# }
-
-
-    include tools::users
-    Tools::Users::Create <| user == 'sde' |>
-
+	tools::users::create { teste:
+        usuario     => "flipper3",
+        grupo       => "flipper3",
+        uid         => "13101",
+        gid         => "13101",
+        password    => "flipper2",
+        home_dir	=> "/home/flipper2"
+	}
 
 	# Initscripts
     file { "/etc/init.d/teste":
