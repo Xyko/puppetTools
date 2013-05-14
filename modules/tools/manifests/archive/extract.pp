@@ -33,10 +33,10 @@ define tools::archive::extract (
         creates => $extract_dir,
         timeout => $timeout,
       }
-      exec {"$name execute":
-        path    => "/bin:/sbin:/usr/bin:/usr/sbin",
-        command => "cd ${extract_dir}; ${execute}",
-      }
+      # exec {"$name execute":
+      #   path    => "/bin:/sbin:/usr/bin:/usr/sbin",
+      #   command => "cd ${extract_dir}; ${execute}",
+      # }
       
     }
     absent: {
