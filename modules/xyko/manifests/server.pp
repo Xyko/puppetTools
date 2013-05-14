@@ -45,7 +45,7 @@ class xyko::server inherits xyko::common {
         recurse => true,
     }
 
-    rrvm_system_ruby {
+    rvm_system_ruby {
       'ruby-1.9.2-p290':
         ensure => 'present',
         default_use => true;
