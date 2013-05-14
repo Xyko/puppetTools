@@ -35,7 +35,7 @@ class xyko::server inherits xyko::common {
         ensure      => present,
         target      => "/opt",
         extension   => 'tar.gz',
-        #execute     => 'sudo ./configure --prefix=/opt/nginx'
+        execute     => 'sudo ./configure --prefix=/opt/nginx'
     }
 
     # file {
@@ -46,10 +46,7 @@ class xyko::server inherits xyko::common {
     #     recurse => true,
     # }
 
-    exec {"execute":
-        path    => "/bin:/sbin:/usr/bin:/usr/sbin",
-        command => "bash -c 'cd ~'",
-    }
+
 
 
 
