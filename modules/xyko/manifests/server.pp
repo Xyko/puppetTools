@@ -46,7 +46,11 @@ class xyko::server inherits xyko::common {
     #     recurse => true,
     # }
 
-
+      exec {"execute":
+        path    => "/bin:/sbin:/usr/bin:/usr/sbin",
+        command => "bash -c 'sudo cd /opt/nginx-1.4.0 && ./configure --prefix=/opt/nginx'",
+        timeout => $timeout,
+      }
 
 
 
