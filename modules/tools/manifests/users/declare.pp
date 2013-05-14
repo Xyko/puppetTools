@@ -1,6 +1,6 @@
 #
 # Este define não deve ser chamado pelo desenvolvedor final, é para uso
-# exclusivo de supso::users
+# exclusivo de tools::users
 #
 # Seu objetivo é varrer todos os projetos e fazer as declarações virtuais dos
 # usuários necessários, segundo os hashs de definição
@@ -15,13 +15,13 @@ define tools::users::declare {
   $myuser = $tools::users::params::map[$user]
 
   $uid          = $myuser[uid]    # Obrigatório
-  $gid          = $myuser[gid]    # Pode ser undef e trata disso em supso::user::declare
-  $group        = $myuser[group]  # Pode ser undef e trata disso em supso::user::declare
-  $_shell       = $myuser[shell]  # Pode ser undef, neste caso supso::user::declare usa /bin/bash
-  $_home        = $myuser[home]   # Pode ser undef e trata disso em supso::user::declare
-  $bashrc       = $myuser[bashrc] # Pode ser undef e trata disso em supso::user::declare
-  $groups       = $myuser[groups] # Pode ser undef e trata disso em supso::user::declare
-  $allowdupe    = $myuser[allowdupe]  # Pode ser undef e trata disso em supso::user::declare
+  $gid          = $myuser[gid]    # Pode ser undef e trata disso em tools::user::declare
+  $group        = $myuser[group]  # Pode ser undef e trata disso em tools::user::declare
+  $_shell       = $myuser[shell]  # Pode ser undef, neste caso tools::user::declare usa /bin/bash
+  $_home        = $myuser[home]   # Pode ser undef e trata disso em tools::user::declare
+  $bashrc       = $myuser[bashrc] # Pode ser undef e trata disso em tools::user::declare
+  $groups       = $myuser[groups] # Pode ser undef e trata disso em tools::user::declare
+  $allowdupe    = $myuser[allowdupe]  # Pode ser undef e trata disso em tools::user::declare
   $_system      = $myuser[system] # Se for undef vai setar explicitamente para false
   $_usepma      = $myuser[usepma] # Se for undef vai setar explicitamente para false
   $_userundeck  = $myuser[userundeck] # Se for undef vai setar explicitamente para false
@@ -32,7 +32,7 @@ define tools::users::declare {
     # ao invés de false
     $home = false
     @infra::notify {
-      "Tratando bug do hash com false para home em supso::users::declare(${user})":
+      "Tratando bug do hash com false para home em tools::users::declare(${user})":
         selector => "tools::users=${user}",
         ;
     }
@@ -46,7 +46,7 @@ define tools::users::declare {
     # ao invés de false
     $shell = false
     @infra::notify {
-      "Tratando bug do hash com false para shell em supso::users::declare(${user})":
+      "Tratando bug do hash com false para shell em tools::users::declare(${user})":
         selector => "tools::users=${user}",
         ;
     }
@@ -79,11 +79,11 @@ define tools::users::declare {
 
   case $::zone {
     'staging', 'prod': {
-      $_pass = $myuser[pass_prod] # Pode ser undef e trata disso em supso::user::create
+      $_pass = $myuser[pass_prod] # Pode ser undef e trata disso em tools::user::create
       if ($_pass == 'false') {
         $pass = false             # Mesmo bug do false
         @infra::notify {
-          "Tratando bug do hash com false para pass_prod em supso::users::declare(${user})":
+          "Tratando bug do hash com false para pass_prod em tools::users::declare(${user})":
             selector => "tools::users=${user}",
             ;
         }
@@ -107,7 +107,7 @@ define tools::users::declare {
       } elsif ($_pass == 'false') {
         $pass = false             # Mesmo bug do false
         @infra::notify {
-          "Tratando bug do hash com false para pass_dev em supso::users::declare(${user})":
+          "Tratando bug do hash com false para pass_dev em tools::users::declare(${user})":
             selector => "tools::users=${user}",
             ;
         }

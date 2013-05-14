@@ -3,7 +3,7 @@
 # Meta define usado para criar usuários para serem usados em puppet realize
 #
 # Deve ser usado para criar usuários necessários a cada projeto. Para mais
-# informações, veja supso/users/params.pp
+# informações, veja tools/users/params.pp
 #
 # Exemplos:
 #  include tools::users
@@ -83,8 +83,8 @@ define tools::users::create (
 
   $mypass       = $pass ? { false => $blocked_pass, default => $pass }
 
-  # Realiza as mensagens que foram pré-geradas em supso::users::declare
-  Infra::Notify <| $selector == "supso::users=${user}" |>
+  # Realiza as mensagens que foram pré-geradas em tools::users::declare
+  Infra::Notify <| $selector == "tools::users=${user}" |>
 
   # Sem shell
   if ( $shell == false ) {
