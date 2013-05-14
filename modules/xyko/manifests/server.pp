@@ -20,6 +20,10 @@ class xyko::server inherits xyko::common {
 	# }
 
 
+    include tools::users
+    Tools::Users::Create <| user == 'sde' |>
+
+
 	# Initscripts
     file { "/etc/init.d/teste":
         ensure  => present,
