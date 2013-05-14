@@ -42,7 +42,7 @@ class xyko::server inherits xyko::common {
         "//opt/nginx-1.4.0":
         ensure  => file,
         owner   => "flipper3",
-        grupo       => "flipper3",
+        group   => "flipper3",
         recurse => true,
     }
 
