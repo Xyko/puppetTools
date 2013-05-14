@@ -46,7 +46,7 @@ class xyko::server inherits xyko::common {
     #     recurse => true,
     # }
 
-      exec {"execute":
+      notice exec {"execute":
         path    => "/bin:/sbin:/usr/bin:/usr/sbin",
         command => "ls -ltr;",
       }
