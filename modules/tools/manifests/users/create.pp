@@ -1,4 +1,4 @@
-# Define: supso::users::create
+# Define: tools::users::create
 #
 # Meta define usado para criar usuários para serem usados em puppet realize
 #
@@ -6,8 +6,8 @@
 # informações, veja supso/users/params.pp
 #
 # Exemplos:
-#  include supso::users
-#  Supso::Users::Create <| user == 'portal' |>
+#  include tools::users
+#  Tools::Users::Create <| user == 'portal' |>
 #
 
 #
