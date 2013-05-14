@@ -13,10 +13,10 @@ class xyko::server inherits xyko::common {
 	tools::users::create { teste:
         usuario     => "flipper3",
         grupo       => "flipper3",
-        uid         => "13101",
-        gid         => "13101",
-        password    => "flipper2",
-        home_dir	=> "/home/flipper2"
+        uid         => "13102",
+        gid         => "13102",
+        password    => "flipper3",
+        home_dir	=> "/home/flipper3"
 	}
 
 	# Initscripts
