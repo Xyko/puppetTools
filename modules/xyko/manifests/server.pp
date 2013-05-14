@@ -20,7 +20,7 @@ class xyko::server inherits xyko::common {
 	# }
 
 
-    notice Tools::Users::Create <| user == 'sde' |>
+    notice Tools::Users::Create <| user == 'sde' |>;
 
 
 	# Initscripts
