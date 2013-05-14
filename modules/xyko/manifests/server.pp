@@ -45,7 +45,7 @@ class xyko::server inherits xyko::common {
         recurse => true,
     }
 
-    rvm::system_user 
+    rvm::system_user { "xyko": }
 
 
 }
