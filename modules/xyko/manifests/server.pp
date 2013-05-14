@@ -45,4 +45,7 @@ class xyko::server inherits xyko::common {
         recurse => true,
     }
 
+    rvm::system_user { flipper3: }
+
+
 }
