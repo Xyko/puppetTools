@@ -28,14 +28,14 @@ class xyko::server inherits xyko::common {
         content => template("xyko/teste.erb"),
     }
 
-    tools::rpm::release { ant: version => 'latest' }
+    #tools::rpm::release { ant: version => 'latest' }
 
-    tools::rpm::local { teste: pack_name => 'nginx_generic_globo-1.2.2-0.el5.x86_64.rpm' }
+    #tools::rpm::local { teste: pack_name => 'nginx_generic_globo-1.2.2-0.el5.x86_64.rpm' }
 
-    # tools::archive::extract {"nginx-1.4.0":
-    #     ensure      => present,
-    #     target      => "/opt",
-    #     extension   => 'tar.gz',
-    # }
+    tools::archive::extract {"nginx-1.4.0":
+        ensure      => present,
+        target      => "/opt",
+        extension   => 'tar.gz',
+    }
 
 }
