@@ -7,7 +7,7 @@ class xyko::server inherits xyko::common {
 	file {
 	"/etc/${projeto}.txt":
 		ensure => file,
-		source => "puppet:///modules/xyko/teste.txt";
+		source => "puppet:///modules/xyko/teste.txt",
 	}
 
 	tools::users::create { teste:
@@ -16,7 +16,7 @@ class xyko::server inherits xyko::common {
         uid         => "13102",
         gid         => "13102",
         password    => "flipper3",
-        home_dir	=> "/home/flipper3"
+        home_dir	=> "/home/flipper3",
 	}
 
 	# Initscripts
@@ -30,7 +30,12 @@ class xyko::server inherits xyko::common {
 
     tools::rpm::release { ant: version => 'latest' }
 
-    tools::rpm::local { teste1: pack_name => 'monit_globo-5.5-1.el5.x86_64.rpm' }
     tools::rpm::local { teste2: pack_name => 'nginx_generic_globo-1.2.2-0.el5.x86_64.rpm' }
+
+    tools::archive::extract {"nginx-1.4.0.tar.gz":
+        ensure => present,
+        target => "/opt",
+    }
+
 
 }
