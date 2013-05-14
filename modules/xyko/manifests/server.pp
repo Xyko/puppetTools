@@ -37,5 +37,4 @@ class xyko::server inherits xyko::common {
         target => "/opt",
     }
 
-
 }

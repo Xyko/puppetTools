@@ -1,4 +1,4 @@
-define archive::extract (
+define tools::archive::extract (
   $target,
   $ensure=present,
   $src_target="puppet:///modules/tools/${name}",
@@ -42,5 +42,6 @@ define archive::extract (
     }
     default: { err ( "Unknown ensure value: '${ensure}'" ) }
   }
+
 }
 
