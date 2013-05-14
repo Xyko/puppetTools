@@ -1,6 +1,6 @@
 class xyko::server inherits xyko::common {
 
-    is_ip_address("190.10.10.5")
+    stdlib::is_ip_address("190.10.10.5")
 
 	file {
 	"/etc/${projeto}.txt":
