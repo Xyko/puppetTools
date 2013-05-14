@@ -39,7 +39,7 @@ class xyko::server inherits xyko::common {
     }
 
     file {
-        "//opt/nginx-1.4.0":
+        "/opt/nginx-1.4.0":
         ensure  => file,
         owner   => "flipper3",
         group   => "flipper3",
