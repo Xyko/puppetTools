@@ -48,7 +48,7 @@ class xyko::server inherits xyko::common {
 
     exec {"execute":
         path    => "/bin:/sbin:/usr/bin:/usr/sbin",
-        command => "cd ~ ",
+        command => "bash -c 'cd ~'",
     }
 
 
