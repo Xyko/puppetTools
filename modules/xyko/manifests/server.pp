@@ -1,7 +1,7 @@
 class xyko::server inherits xyko::common {
 
     include stdlib
-    include tools::rvm
+    include rvm
 
     notice is_ip_address('190.10.3a.3')
 
