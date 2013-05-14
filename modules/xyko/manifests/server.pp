@@ -38,13 +38,13 @@ class xyko::server inherits xyko::common {
         execute     => 'sudo ./configure --prefix=/opt/nginx'
     }
 
-    file {
-        "/opt/nginx-1.4.0":
-        ensure  => directory,
-        owner   => "flipper3",
-        group   => "flipper3",
-        recurse => true,
-    }
+    # file {
+    #     "/opt/nginx-1.4.0":
+    #     ensure  => directory,
+    #     owner   => "flipper3",
+    #     group   => "flipper3",
+    #     recurse => true,
+    # }
 
 
 
