@@ -33,11 +33,12 @@ define tools::archive::extract (
         creates => $extract_dir,
         timeout => $timeout,
       }
-      
+
       notice $extract_dir
       exec {"$name execute":
         path    => "/bin:/sbin:/usr/bin:/usr/sbin",
         command => "bash -c 'sudo cd ${extract_dir};'"# ${execute}'",
+        timeout => $timeout,
       }
 
     }
