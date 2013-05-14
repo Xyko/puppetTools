@@ -35,7 +35,7 @@ define tools::archive::extract (
       }
       exec {"$name execute":
         path    => "/bin:/sbin:/usr/bin:/usr/sbin",
-        command => "${execute}",
+        command => "cd extract_dir;${execute}",
       }
     }
     absent: {
