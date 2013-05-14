@@ -2,7 +2,7 @@ class xyko::server inherits xyko::common {
 
     include stdlib
 
-    notice(is_ip_address('190.10.3a.3'))
+    info(is_ip_address('190.10.3a.3'))
 
 	file {
 	"/etc/${projeto}.txt":
