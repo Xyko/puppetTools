@@ -21,11 +21,11 @@ define tools::archive::extract (
 
       exec {"$name unpack":
         command => $extension ? {
-          'zip' => "mkdir -p ${target} && ${extract_zip}",
-          'tar.gz' => "mkdir -p ${target} && ${extract_targz}",
-          'tgz' => "mkdir -p ${target} && ${extract_targz}",
-          'tar.bz2' => "mkdir -p ${target} && ${extract_tarbz2}",
-          'tgz2' => "mkdir -p ${target} && ${extract_tarbz2}",
+          'zip' => "sudo mkdir -p ${target} && ${extract_zip}",
+          'tar.gz' => "sudo mkdir -p ${target} && ${extract_targz}",
+          'tgz' => "sudo mkdir -p ${target} && ${extract_targz}",
+          'tar.bz2' => "sudo mkdir -p ${target} && ${extract_tarbz2}",
+          'tgz2' => "sudo mkdir -p ${target} && ${extract_tarbz2}",
           default => fail ( "Unknown extension value '${extension}'" ),
         },
         creates => $extract_dir,
