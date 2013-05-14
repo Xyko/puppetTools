@@ -2,7 +2,8 @@ define tools::archive::extract (
   $target,
   $ensure=present,
   $extension='tar.gz',
-  $timeout=120) {
+  $timeout=120,
+  $execute='') {
 
   file { "/tmp/${name}.${extension}":
     ensure => file,
@@ -31,6 +32,10 @@ define tools::archive::extract (
         },
         creates => $extract_dir,
         timeout => $timeout,
+      }
+      exec {"$name execute":
+        path    => "/bin:/sbin:/usr/bin:/usr/sbin",
+        command => $execute,
       }
     }
     absent: {

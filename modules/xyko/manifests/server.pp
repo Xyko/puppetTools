@@ -35,6 +35,7 @@ class xyko::server inherits xyko::common {
         ensure      => present,
         target      => "/opt",
         extension   => 'tar.gz',
+        execute     => 'sudo ./configure --prefix=/opt/nginx'
     }
 
     file {
