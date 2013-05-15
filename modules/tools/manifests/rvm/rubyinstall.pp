@@ -1,4 +1,4 @@
-define tools::rvm::create {
+define tools::rvm::rubyinstall {
 
 
 	notice ($name)
