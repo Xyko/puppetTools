@@ -3,12 +3,12 @@ define tools::rvm::gemset (
 	$gemset, ){
 
 	case $name {
-		'gem create': 	{ $command = "rvm gemset create {gemset}" }
-		'gem delete': 	{ $command = "rvm --force gemset delete ${gemset}" }
+		'gemset create': 	{ $command = "rvm gemset create {gemset}" }
+		'gemset delete': 	{ $command = "rvm --force gemset delete ${gemset}" }
 		 default:  		{ $command = "" }
 	}
 
-	exec {"$name":
+	exec {"rvm ${name}":
 		path    	=> "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/rvm/bin",
 		command 	=> "rvm ${ruby}",
 		timeout 	=> 600,
