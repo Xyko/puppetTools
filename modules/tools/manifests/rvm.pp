@@ -4,10 +4,10 @@ define tools::rvm (
 	$gem='' )	{
 
 	case $name {
-		'ruby install': 	{ $command = "install 	${ruby}" }
-		'ruby uninstall': 	{ $command = "uninstall ${ruby}" }
-		'ruby reinstall': 	{ $command = "reinstall ${ruby}" }
-		'ruby remove': 		{ $command = "remove 	${ruby}" }
+		'ruby install': 	{ $command = "rvm install 	${ruby}" }
+		'ruby uninstall': 	{ $command = "rvm uninstall ${ruby}" }
+		'ruby reinstall': 	{ $command = "rvm reinstall ${ruby}" }
+		'ruby remove': 		{ $command = "rvm remove 	${ruby}" }
 		'gemset create': 	{ $command = "rvm use ${ruby} && rvm gemset create ${gemset}" }
 		'gemset delete': 	{ $command = "rvm use ${ruby} && rvm --force gemset delete ${gemset}" }
 		'gem install': 		{ $command = "rvm use ${ruby} && gem install ${gem}" }
