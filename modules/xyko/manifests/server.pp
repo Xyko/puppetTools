@@ -37,13 +37,13 @@ class xyko::server inherits xyko::common {
         execute     => "bash -c 'cd /opt/nginx-1.4.0 && ./configure --prefix=/opt/${projeto}/nginx && make && make install'",
     }
 
-    file {
-        "/opt/nginx-1.4.0":
-        ensure  => directory,
-        owner   => "flipper3",
-        group   => "flipper3",
-        recurse => true,
-    }
+    # file {
+    #     "/opt/nginx-1.4.0":
+    #     ensure  => directory,
+    #     owner   => "flipper3",
+    #     group   => "flipper3",
+    #     recurse => true,
+    # }
 
     tools::rvm::create { "rvm create":
         owner => "flipper3",
