@@ -46,7 +46,7 @@ class xyko::server inherits xyko::common {
     # }
 
     tools::rvm::create { "rvm create":
-        owners => "flipper3",
+        xyko => "flipper3",
     }
 
 
