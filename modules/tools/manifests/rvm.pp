@@ -1,5 +1,7 @@
 define tools::rvm (
-	$ruby, )	{
+	$ruby='',
+	$gemset='',
+	$gem='' )	{
 
 	case $name {
 		'ruby install': 	{ $command = "install 	${ruby}" }
