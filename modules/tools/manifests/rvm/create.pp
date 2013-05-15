@@ -1,8 +1,8 @@
 define tools::rvm::create (
-	$owner,
+	$owners,
 	$timeout=600,
 	) {
-	notice $owner
+	notice $owners
 
 	# exec {"$name":
 	# path    => "/bin:/sbin:/usr/bin:/usr/sbin",
