@@ -9,4 +9,6 @@ define tools::rvm::create (
 	# command => "bash -c 'su - ${owner} && curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby'",
 	# timeout => $timeout,
 	# }
+
+		notice $timeout
 }
