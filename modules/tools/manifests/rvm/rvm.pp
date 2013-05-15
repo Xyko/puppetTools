@@ -1,6 +1,6 @@
-define tools::rvm {
+define tools::rvm::gemset {
 
-
-	notice "teste do teste"
-
+	notice $command
+	notice $ruby
+	notice $gemset
 }
