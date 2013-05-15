@@ -12,7 +12,7 @@ define tools::rvm::gemset (
 
 	exec {"$name":
 		path    	=> "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/rvm/bin",
-		command 	=> "rvm gemset create ${gemset}",
+		command 	=> "rvm use ruby-2.0.0-p195 && rvm gemset create ${gemset}",
 		timeout 	=> 600,
 		logoutput	=> true,
 		user 		=> root,
