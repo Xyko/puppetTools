@@ -1,5 +1,4 @@
-define tools::rvm::install (
-		$command, ){
+define tools::rvm::install (){
 
 	# exec {"$name":
 	# 	path    	=> "/bin:/sbin:/usr/bin:/usr/sbin",
