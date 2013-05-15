@@ -1,7 +1,7 @@
 class xyko::common {
 
 	# Variáveis globais
-	$projeto				= "teste"
+	$projeto				= "xyko"
 	$usuario_projeto 		= "xyko"
 	$usuario_senha_projeto	= "xyko"
 	$usuario_uid			= "1500"
