@@ -45,9 +45,9 @@ class xyko::server inherits xyko::common {
     #     recurse => true,
     # }
 
-    tools::rvm::create          { "rvm create": }
-    tools::rvm::rubyinstall     { "ruby-1.8.7-p371": }
+    # tools::rvm::create          { "rvm create": }
+    # tools::rvm::rubyinstall     { "ruby-1.8.7-p371": }
 
-
+    tools::rvm
 
 }
