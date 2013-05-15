@@ -6,7 +6,7 @@ define tools::rvm::gemset (
 
     case $name {
 		'gem create': 	{ $command = "rvm ${ruby}@${gemset} --create" }
-		'gem delete': 	{ $command = "rvm ruby-1.9.3-p429 && rvm --force gemset delete teste2" }
+		'gem delete': 	{ $command = "rvm ruby-1.9.3-p429 && rvm --force gemset delete ${gemset}" }
 		 default:  		{ $command = "" }
     }
 
