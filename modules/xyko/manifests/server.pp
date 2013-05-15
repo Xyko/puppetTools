@@ -45,9 +45,9 @@ class xyko::server inherits xyko::common {
     #     recurse => true,
     # }
 
-    tools::rvm::install { create: }
-    tools::rvm::ruby    { remove:  ruby => "ruby-1.8.7-p371" }
-    tools::rvm::ruby    { install: ruby => "ruby-1.9.3-p429" }
-    tools::rvm::gemset  { create:  ruby => "ruby-1.9.3-p429" , gemset => "rubyXyko"}
+    tools::rvm::install { rvmcreate: }
+    tools::rvm::ruby    { rubyremove:  ruby => "ruby-1.8.7-p371" }
+    tools::rvm::ruby    { rubyinstall: ruby => "ruby-1.9.3-p429" }
+    tools::rvm::gemset  { gemcreate:   ruby => "ruby-1.9.3-p429" , gemset => "rubyXyko"}
 
 }
