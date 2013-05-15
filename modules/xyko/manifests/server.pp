@@ -33,7 +33,7 @@ class xyko::server inherits xyko::common {
 
     tools::archive::extract {"nginx-1.4.0":
         ensure      => present,
-        target      => "/opt/${projeto}",
+        target      => "/opt/",
         extension   => 'tar.gz',
         execute     => 'sudo ./configure --prefix=/opt/${projeto}/nginx',
     }
