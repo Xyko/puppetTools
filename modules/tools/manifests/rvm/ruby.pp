@@ -2,10 +2,10 @@ define tools::rvm::ruby (
 	$ruby, )	{
 
     case $name {
-		'install': 		{ $command = "install" }
-		'uninstall': 	{ $command = "uninstall" }
-		'reinstall': 	{ $command = "reinstall" }
-		'remove': 		{ $command = "remove" }
+		'ruby install': 	{ $command = "install" }
+		'ruby uninstall': 	{ $command = "uninstall" }
+		'ruby reinstall': 	{ $command = "reinstall" }
+		'ruby remove': 		{ $command = "remove" }
 		default:  { $command = "" }
     }
 
