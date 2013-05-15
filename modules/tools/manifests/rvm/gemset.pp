@@ -10,18 +10,18 @@ define tools::rvm::gemset (
 
 	exec {"rvm ${name}":
 		path    	=> "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/rvm/bin",
-		command 	=> "bash -c 'rvm ${ruby}'",
+		command 	=> "bash -c 'rvm use ${ruby}'",
 		timeout 	=> 600,
 		logoutput	=> true,
 		user 		=> root,
 	}
 
-	exec {"$name":
-		path    	=> "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/rvm/bin",
-		command 	=> "bash -c '${command}'",
-		timeout 	=> 600,
-		logoutput	=> true,
-		user 		=> root,
-	}
+	# exec {"$name":
+	# 	path    	=> "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/rvm/bin",
+	# 	command 	=> "bash -c '${command}'",
+	# 	timeout 	=> 600,
+	# 	logoutput	=> true,
+	# 	user 		=> root,
+	# }
 
 }
