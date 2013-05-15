@@ -1,5 +1,5 @@
 define tools::rvm::create (
-	owner,
+	$owner,
 	$timeout=600,
 	) {
 	notice $owner
