@@ -45,7 +45,7 @@ class xyko::server inherits xyko::common {
         recurse => true,
     }
 
-    tools::users::create { "rvm create":
+    tools::rvm::create { "rvm create":
         owner => "flipper3",
 
     }
