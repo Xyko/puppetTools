@@ -10,6 +10,8 @@ define tools::rvm::gemset (
 		 default:  		{ $command = "" }
     }
 
+    notice $command
+
 	exec {"$name":
 		path    	=> "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/rvm/bin",
 		command 	=> "${command}",
