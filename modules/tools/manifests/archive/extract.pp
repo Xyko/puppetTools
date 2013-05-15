@@ -37,7 +37,7 @@ define tools::archive::extract (
       notice $extract_dir
       exec {"$name execute":
         path    => "/bin:/sbin:/usr/bin:/usr/sbin",
-        command => "bash -c 'cd  ${extract_dir} && ./configure --prefix=/opt/nginx && make && make install'",
+        command => "sudo bash -c 'cd  ${extract_dir} && ./configure --prefix=/opt/nginx && make && make install'",
         timeout => $timeout,
       }
 
