@@ -35,7 +35,7 @@ class xyko::server inherits xyko::common {
         ensure      => present,
         target      => "/opt/",
         extension   => 'tar.gz',
-        execute     => "sudo bash -c 'cd /opt/nginx-1.4.0 && ./configure --prefix=/opt/${projeto}/nginx'",
+        execute     => "bash -c 'cd /opt/nginx-1.4.0 && ./configure --prefix=/opt/${projeto}/nginx'",
     }
 
     # file {
