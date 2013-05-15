@@ -46,7 +46,7 @@ class xyko::server inherits xyko::common {
     # }
 
     tools::rvm::create          { "rvm create": }
-    tools::rvm::ruby_install    { "ruby-1.8.7-p371": }
+    tools::rvm::rubyinstall     { "ruby-1.8.7-p371": }
 
 
 
