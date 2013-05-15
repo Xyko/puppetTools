@@ -10,7 +10,7 @@ define tools::rvm::gemset (
 
 	exec {"rvm ${name}":
 		path    	=> "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/rvm/bin",
-		command 	=> "rvm ${ruby}",
+		command 	=> "bash -c 'rvm ${ruby}'",
 		timeout 	=> 600,
 		logoutput	=> true,
 		user 		=> root,
@@ -18,7 +18,7 @@ define tools::rvm::gemset (
 
 	exec {"$name":
 		path    	=> "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/rvm/bin",
-		command 	=> "${command}",
+		command 	=> "bash -c '${command}'",
 		timeout 	=> 600,
 		logoutput	=> true,
 		user 		=> root,
