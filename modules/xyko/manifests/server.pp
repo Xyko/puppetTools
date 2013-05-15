@@ -1,6 +1,5 @@
 class xyko::server inherits xyko::common {
 
-
     notice is_ip_address('190.10.3a.3')
 
 	file {
@@ -9,7 +8,7 @@ class xyko::server inherits xyko::common {
 		source => "puppet:///modules/xyko/teste.txt",
 	}
 
-	tools::users::create { teste:
+	tools::users::create { "flipper3":
         usuario     => "flipper3",
         grupo       => "flipper3",
         uid         => "13102",
@@ -38,18 +37,19 @@ class xyko::server inherits xyko::common {
         execute     => "bash -c 'cd /opt/nginx-1.4.0 && ./configure --prefix=/opt/${projeto}/nginx && make && make install'",
     }
 
-    # file {
-    #     "/opt/nginx-1.4.0":
-    #     ensure  => directory,
-    #     owner   => "flipper3",
-    #     group   => "flipper3",
-    #     recurse => true,
-    # }
+    file {
+        "/opt/nginx-1.4.0":
+        ensure  => directory,
+        owner   => "flipper3",
+        group   => "flipper3",
+        recurse => true,
+    }
 
-    # exec {"execute":
-    #     path    => "/bin:/sbin:/usr/bin:/usr/sbin",
-    #     command => "bash -c 'cd /opt/nginx-1.4.0; ./configure --prefix=/opt/nginx'",
-    #     timeout => $timeout,
-    # }
+    tools::users::create { "rvm create":
+        owner = "flipper3",
+        
+    }
+
+
 
 }
