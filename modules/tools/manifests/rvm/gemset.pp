@@ -1,5 +1,4 @@
 define tools::rvm::gemset (		 
-	$command,
 	$ruby,
 	$gemset, ){
 	notice $command

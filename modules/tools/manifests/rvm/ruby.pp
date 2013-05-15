@@ -1,5 +1,4 @@
 define tools::rvm::ruby (
-	$command,
 	$ruby, )	{
 
     case $name {
