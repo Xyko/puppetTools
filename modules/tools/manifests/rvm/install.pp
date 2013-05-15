@@ -10,7 +10,7 @@ define tools::rvm::install (){
 
     case $name {
 		'rvm create': { $command = "bash -c 'curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby'" }
-		'rvm delete': { $command = "rm -rf /usr/local/rvm && rm /etc/profile.d/rvm.sh" }
+		'rvm delete': { $command = "rvm implode" }
 		default:  { $command = "" }
     }
 

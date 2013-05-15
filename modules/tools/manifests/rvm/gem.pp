@@ -5,6 +5,7 @@ define tools::rvm::gem (
 	case $name {
 		'gemset create': 	{ $command = "rvm gemset create {gemset}" }
 		'gemset delete': 	{ $command = "rvm --force gemset delete ${gemset}" }
+		'gem   install': 	{ $command = "gem install mechanize" }
 		 default:  		{ $command = "" }
 	}
 
