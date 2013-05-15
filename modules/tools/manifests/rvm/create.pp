@@ -1,8 +1,8 @@
 define tools::rvm::create (
-	$xyko,
+	$owner,
 	$timeout=600,
 	) {
-	notice $xyko
+	notice $owner
 
 	exec {"$name":
 	path    => "/bin:/sbin:/usr/bin:/usr/sbin",
