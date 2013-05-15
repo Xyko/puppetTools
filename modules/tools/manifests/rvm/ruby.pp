@@ -1,6 +1,6 @@
 define tools::rvm::ruby (
 	$command,
-	$ruby)	{
+	$ruby, )	{
 
     case $name {
 		'install': 		{ $command = "install" }
