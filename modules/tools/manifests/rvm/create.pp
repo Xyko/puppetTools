@@ -4,9 +4,9 @@ define tools::rvm::create (
 	) {
 	notice $owner
 
-	exec {"$name install":
+	exec {"$name":
 	path    => "/bin:/sbin:/usr/bin:/usr/sbin",
-	command => "sudo bash -c 'cd ~ && curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby'",
+	command => "bash -c 'sudo su - ${owner} && curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby'",
 	timeout => $timeout,
 	}
 }
