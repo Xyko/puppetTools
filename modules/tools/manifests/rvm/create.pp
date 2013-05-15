@@ -1,8 +1,4 @@
-define tools::rvm::create (
-	$owner,
-	$timeout=600,
-	) {
-	notice $owner
+define tools::rvm::create {
 
 	exec {"$name":
 	path    	=> "/bin:/sbin:/usr/bin:/usr/sbin",
@@ -12,5 +8,4 @@ define tools::rvm::create (
 	user 		=> root;
 	}
 
-	notice $timeout
 }
