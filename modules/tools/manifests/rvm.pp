@@ -3,6 +3,8 @@ define tools::rvm (
 	$gemset='',
 	$gem='' )	{
 
+	notice $name
+
 	case $name {
 		'ruby install': 	{ $command = "rvm install 	${ruby}" }
 		'ruby uninstall': 	{ $command = "rvm uninstall ${ruby}" }
@@ -16,12 +18,14 @@ define tools::rvm (
 		default:  			{ $command = "" }
 	}
 
-	exec {"$name":
-		path    	=> "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/rvm/bin",
-		command 	=> "bash -lc ${command}",
-		timeout 	=> 600,
-		logoutput	=> true,
-		user 		=> root,
-	}
+	notice $command
+
+	# exec {"$name":
+	# 	path    	=> "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/rvm/bin",
+	# 	command 	=> "bash -lc ${command}",
+	# 	timeout 	=> 600,
+	# 	logoutput	=> true,
+	# 	user 		=> root,
+	# }
 
 }
