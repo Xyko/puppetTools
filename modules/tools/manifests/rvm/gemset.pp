@@ -10,7 +10,7 @@ define tools::rvm::gemset (
 
 	exec {"rvm ${name}":
 		path    	=> "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/rvm/bin",
-		command 	=> "rvm gem install mechanize",
+		command 	=> "gem install mechanize",
 		timeout 	=> 600,
 		logoutput	=> true,
 		user 		=> root,
