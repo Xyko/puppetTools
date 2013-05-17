@@ -48,15 +48,16 @@ class xyko::server inherits xyko::common {
     # tools::rvm { "rvm create": }
     # tools::rvm { "ruby install":    ruby => "ruby-1.9.3-head" }
 
-   # tools::out {msg: msg => "menssage 1" }
+    tools::out {msg: msg => "menssage 1" }
+    tools::out {msg: msg => "menssage 2" }
 
     # ialling transmition
     # yum install gcc gcc-c++ m4 make automake libtool gettext openssl-devel pkg-config libcurl intltool
-# $ svn co svn://svn.transmissionbt.com/Transmission/trunk Transmission
-# $ cd Transmission
-# $ ./autogen.sh && make -s
-# $ su (if necessary for the next line)
-# $ make install
+    # $ svn co svn://svn.transmissionbt.com/Transmission/trunk Transmission
+    # $ cd Transmission
+    # $ ./autogen.sh && make -s
+    # $ su (if necessary for the next line)
+    # $ make install
 
 
     # $ xz -d -c transmission-2.11.tar.xz | tar xf -
