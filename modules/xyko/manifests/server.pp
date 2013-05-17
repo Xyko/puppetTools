@@ -48,8 +48,8 @@ class xyko::server inherits xyko::common {
     # tools::rvm { "rvm create": }
     # tools::rvm { "ruby install":    ruby => "ruby-1.9.3-head" }
 
-    tools::out {msg: msg => "menssage 1" }
-    tools::out {msg: msg => "menssage 2" }
+    tools::out {msg1: msg => "menssage 1" }
+    tools::out {msg2: msg => "menssage 2" }
 
     # ialling transmition
     # yum install gcc gcc-c++ m4 make automake libtool gettext openssl-devel pkg-config libcurl intltool
