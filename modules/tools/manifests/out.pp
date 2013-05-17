@@ -1,5 +1,5 @@
-define tools::out () {
+define tools::out ($message) {
 
-	notice "teste"
+	notice $message
 
 }
