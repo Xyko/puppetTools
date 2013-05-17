@@ -22,7 +22,7 @@ define tools::rvm (
 
 	exec {"$name":
 		path    	=> "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/rvm/bin",
-		command 	=> "bash -lc ${command}",
+		command 	=> "sudo bash -lc ${command}",
 		timeout 	=> 600,
 		logoutput	=> true,
 		user 		=> root,
