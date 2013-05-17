@@ -12,7 +12,7 @@ define tools::rvm (
 		'gemset delete': 	{ $command = "rvm use ${ruby} && rvm --force gemset delete ${gemset}" }
 		'gem install': 		{ $command = "rvm use ${ruby} && gem install ${gem}" }
 		'rvm create': 		{ 
-			if file_exists("/usr/local/rvmx") {
+			if exists("/usr/local/rvmx") {
 				$command = "curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby"
 			} else {
 				debug_msg("alert", "O RVM já está instalado.")
