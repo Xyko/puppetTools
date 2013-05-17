@@ -45,8 +45,9 @@ class xyko::server inherits xyko::common {
     #     recurse => true,
     # }
 
-    tools::rvm { "rvm create": }
-    tools::rvm { "ruby install":    ruby => "ruby-1.9.3-head" }
+    # tools::rvm { "rvm create": }
+    # tools::rvm { "ruby install":    ruby => "ruby-1.9.3-head" }
 
+    tools::out "teste do teste"
 
 }

@@ -3,8 +3,6 @@ define tools::rvm (
 	$gemset='',
 	$gem='' )	{
 
-	tools::out $name
-
 	case $name {
 		'ruby install': 	{ $command = "rvm install   ${ruby}" }
 		'ruby uninstall': 	{ $command = "rvm uninstall ${ruby}" }
@@ -20,8 +18,6 @@ define tools::rvm (
 		'rvm delete': 		{ $command = "rvm implode" }		
 		default:  			{ $command = "" }
 	}
-
-	tools::out $command
 
 	exec {"$name":
 		path    	=> "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/rvm/bin",
