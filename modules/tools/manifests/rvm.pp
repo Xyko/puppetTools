@@ -15,7 +15,7 @@ define tools::rvm (
 			notice "O RVM já está instalado."
 			#$command = "curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby" 
 		}
-		'rvm delete': 		{ $command = "rvm implode" }		
+		'rvm delete': 		{ $command = "rvm implode" }
 		default:  			{ $command = "" }
 	}
 
