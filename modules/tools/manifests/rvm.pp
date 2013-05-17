@@ -28,4 +28,8 @@ define tools::rvm (
 		user 		=> root,
 	}
 
+
+#sudo -i puppet apply -e "exec {teste: path  => \"/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/rvm/bin\", command => \"bash -lc 'rvm implode'\", timeout => 600, logoutput=> true, user => root, }"
+
+
 }
