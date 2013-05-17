@@ -1,6 +1,6 @@
 class xyko::server inherits xyko::common {
 
-    notice is_ip_address('190.10.3a.3')
+    #notice is_ip_address('190.10.3a.3')
 
     # debug_msg("notice","NOTICE message")
     # debug_msg("debug", "Send as a debug message")
