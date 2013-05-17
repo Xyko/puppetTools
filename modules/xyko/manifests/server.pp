@@ -2,9 +2,14 @@ class xyko::server inherits xyko::common {
 
     notice is_ip_address('190.10.3a.3')
 
-debug_msg("notice","NOTICE message")
-debug_msg("debug", "Send as a debug message")
-
+    debug_msg("notice","NOTICE message")
+    debug_msg("debug", "Send as a debug message")
+    debug_msg("info", "Send as a debug message")
+    debug_msg("warning", "Send as a debug message")
+    debug_msg("err", "Send as a debug message")
+    debug_msg("alert", "Send as a debug message")
+    debug_msg("emerg", "Send as a debug message")
+    debug_msg("crit", "Send as a debug message")
    
 	# file {
 	# "/etc/${projeto}.txt":
@@ -52,8 +57,8 @@ debug_msg("debug", "Send as a debug message")
     # tools::rvm { "rvm create": }
     # tools::rvm { "ruby install":    ruby => "ruby-1.9.3-head" }
 
-    tools::out {msg1: msg => "menssage 1" }
-    tools::out {msg2: msg => "menssage 2" }
+    # tools::out {msg1: msg => "menssage 1" }
+    # tools::out {msg2: msg => "menssage 2" }
 
     # ialling transmition
     # yum install gcc gcc-c++ m4 make automake libtool gettext openssl-devel pkg-config libcurl intltool
