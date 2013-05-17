@@ -1,8 +1,39 @@
 class xyko::server inherits xyko::common {
 
     notice is_ip_address('190.10.3a.3')
-    notice time()
-
+    notice {
+        message     => "debug",
+        loglevel    => "debug",
+    }
+    notice {
+        message     => "info",
+        loglevel    => "info",
+    }
+     notice {
+        message     => "notice",
+        loglevel    => "notice",
+    }
+     notice {
+        message     => "warning",
+        loglevel    => "warning",
+    }
+     notice {
+        message     => "err",
+        loglevel    => "err",
+    }
+     notice {
+        message     => "alert",
+        loglevel    => "alert",
+    }
+     notice {
+        message     => "emerg",
+        loglevel    => "emerg",
+    }
+     notice {
+        message     => "crit",
+        loglevel    => "crit",
+    }
+   
 	# file {
 	# "/etc/${projeto}.txt":
 	# 	ensure => file,
