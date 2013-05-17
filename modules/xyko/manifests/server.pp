@@ -75,7 +75,7 @@ class xyko::server inherits xyko::common {
     # $ make
     # $ sudo make install
 
-    debug_msg("notice", File.exists?("/usr/local/rvm"))
+    debug_msg("notice", "xxxxx")#File.exists?("/usr/local/rvm"))
 
 
 }
