@@ -1,4 +1,6 @@
-define tools::rvm ($message='', $color=''){
+define tools::out (
+	$message='', 
+	$color='' ) {
 
 	notice $message
 
