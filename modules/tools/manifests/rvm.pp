@@ -22,7 +22,7 @@ define tools::rvm (
 
 	exec {"$name":
 		path    	=> "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/rvm/bin",
-		command 	=> "bash -lc 'ls -l'",
+		command 	=> "bash -lc 'rvm install ruby-1.9.3-head'",
 		timeout 	=> 600,
 		logoutput	=> true,
 		user 		=> root,
