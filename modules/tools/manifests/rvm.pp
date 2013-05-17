@@ -6,7 +6,7 @@ define tools::rvm (
 	notice $name
 
 	case $name {
-		'ruby install': 	{ $command = "sudo rvm install 	${ruby}" }
+		'ruby install': 	{ $command = "rvm install   ${ruby}" }
 		'ruby uninstall': 	{ $command = "rvm uninstall ${ruby}" }
 		'ruby reinstall': 	{ $command = "rvm reinstall ${ruby}" }
 		'ruby remove': 		{ $command = "rvm remove 	${ruby}" }
