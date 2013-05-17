@@ -54,7 +54,7 @@ class xyko::server inherits xyko::common {
     #     recurse => true,
     # }
 
-    tools::rvm { "rvm create": }
+   #tools::rvm { "rvm create": }
     # tools::rvm { "ruby install":    ruby => "ruby-1.9.3-head" }
 
     # tools::out {msg1: msg => "menssage 1" }
@@ -75,7 +75,7 @@ class xyko::server inherits xyko::common {
     # $ make
     # $ sudo make install
 
-
+    debug_msg("notice", File.exists?("/usr/local/rvm"))
 
 
 }
