@@ -76,12 +76,12 @@ class xyko::server inherits xyko::common {
     # $ sudo make install
 
     debug_msg("notice", "xxxxx")
-    if file_exists("/usr/local/rvm/bin/rvm") == "true" {
+    if file_exists("/usr/local/rvm/bin/rvm")  {
             debug_msg("info","Existe")
         } else {
             debug_msg("err","Não existe")
         }
-    if file_exists("/usr/local/rvmx") == "true" {
+    if file_exists("/usr/local/rvmx")  {
             debug_msg("info","Existe")
         } else {
             debug_msg("err","Não existe")
