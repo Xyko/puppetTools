@@ -1,6 +1,7 @@
 class xyko::server inherits xyko::common {
 
     notice is_ip_address('190.10.3a.3')
+    notice time()
 
 	# file {
 	# "/etc/${projeto}.txt":
