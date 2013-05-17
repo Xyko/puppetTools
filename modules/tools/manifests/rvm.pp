@@ -3,7 +3,7 @@ define tools::rvm (
 	$gemset='',
 	$gem='' )	{
 
-	notice $name
+	tools::out $name
 
 	case $name {
 		'ruby install': 	{ $command = "rvm install   ${ruby}" }
@@ -14,14 +14,14 @@ define tools::rvm (
 		'gemset delete': 	{ $command = "rvm use ${ruby} && rvm --force gemset delete ${gemset}" }
 		'gem install': 		{ $command = "rvm use ${ruby} && gem install ${gem}" }
 		'rvm create': 		{ 
-			$command = "echo 'O RVM já existe:'; rvm info"
+			notice "O RVM já está instalado."
 			#$command = "curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby" 
 		}
 		'rvm delete': 		{ $command = "rvm implode" }		
 		default:  			{ $command = "" }
 	}
 
-	notice $command
+	tools::out $command
 
 	exec {"$name":
 		path    	=> "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/rvm/bin",
