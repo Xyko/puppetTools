@@ -78,8 +78,9 @@ class xyko::server inherits xyko::common {
 
     if file_exists("/usr/local/rvm") == 'true' {
         debug_msg("warning", "OK")
+    } else {
+        debug_msg("warning", "ERROR")        
     }
-    notice file_exists("/usr/local/rvmx")
 
 
 
