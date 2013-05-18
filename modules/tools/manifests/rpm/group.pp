@@ -1,4 +1,4 @@
-define group($ensure = "present", $optional = false) {
+define tools::rpm::group($ensure = "present", $optional = false) {
    case $ensure {
       present,installed: {
          $pkg_types_arg = $optional ? {
