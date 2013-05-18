@@ -1,4 +1,4 @@
-define tools::rpm::local( $pack_name, $option=[]) {
+define tools::rpm::local( $pack_name, $option='') {
 
 	file {
 	"/tmp/${pack_name}":
@@ -11,7 +11,7 @@ define tools::rpm::local( $pack_name, $option=[]) {
 		provider => rpm,
 		source   => "/tmp/${pack_name}",
 		require => File["/tmp/${pack_name}"],
-		install_options => $options,
+		install_options => ["${options}"],
 	} 
 
 }
