@@ -1,7 +1,4 @@
-define tools::rpm::local( $pack_name ) {
-
-	notice ($pack_name)
-	notice ($uptime)
+define tools::rpm::local( $pack_name, $option=[]) {
 
 	file {
 	"/tmp/${pack_name}":
@@ -14,6 +11,7 @@ define tools::rpm::local( $pack_name ) {
 		provider => rpm,
 		source   => "/tmp/${pack_name}",
 		require => File["/tmp/${pack_name}"],
+		install_options => $options,
 	} 
 
 }
