@@ -1,4 +1,4 @@
-define tools::rpm::yum() {
+define tools::rpm::yum($version='') {
 
 	notice $name
 
