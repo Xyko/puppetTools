@@ -1,4 +1,4 @@
-define tools::rpm::local( $pack_name, $option='') {
+define tools::rpm::local( $pack_name, $options='') {
 
 	file {
 	"/tmp/${pack_name}":
