@@ -39,6 +39,10 @@ class xyko::server inherits xyko::common {
 
     #tools::rpm::local { teste: pack_name => 'nginx_generic_globo-1.2.2-0.el5.x86_64.rpm' }
 
+    tools::rpm::local { teste: pack_name => 'transmission-common-2.04-2.fc14.1.x86_64.rpm' }
+    tools::rpm::local { teste: pack_name => 'transmission-gtk-2.04-2.fc14.1.x86_64.rpm' }
+
+
     # tools::archive::extract {"nginx-1.4.0":
     #     ensure      => present,
     #     target      => "/opt/",
@@ -54,33 +58,24 @@ class xyko::server inherits xyko::common {
     #     recurse => true,
     # }
 
-   #tools::rvm { "rvm create": }
-    # tools::rvm { "ruby install":    ruby => "ruby-1.9.3-head" }
-
-    # tools::out {msg1: msg => "menssage 1" }
-    # tools::out {msg2: msg => "menssage 2" }
-
-    # ialling transmition
-    # yum install gcc gcc-c++ m4 make automake libtool gettext openssl-devel pkg-config libcurl intltool
-    # $ svn co svn://svn.transmissionbt.com/Transmission/trunk Transmission
-    # $ cd Transmission
-    # $ ./autogen.sh && make -s
-    # $ su (if necessary for the next line)
-    # $ make install
+    #tools::rvm { "rvm create": }
+    # tools::rvm { "ruby install": ruby => "ruby-1.9.3-head" }
+    # tools::rvm { "rgem install": ruby => "", gem => "railsd" }
+    # tools::rvm { "rgem install": ruby => "", gem => "mechanized" }
+    # tools::rvm { "rgem install": ruby => "", gem => "unicornd" }
+    # tools::rvm { "rgem install": ruby => "", gem => "nokogirid" }
+    # tools::rvm { "rgem install": ruby => "", gem => "highlined" }
+    # tools::rvm { "rgem install": ruby => "", gem => "devised" }
+    # tools::rvm { "rgem install": ruby => "", gem => "hpricotd" }
+    # tools::rvm { "rgem install": ruby => "", gem => "mysql2d" }
+    # tools::rvm { "rgem install": ruby => "", gem => "rufus-schedulerd" }
 
 
-    # $ xz -d -c transmission-2.11.tar.xz | tar xf -
-    # $ cd transmission-2.11
-    # $ ./configure
-    # $ make
-    # $ sudo make install
-
-
-    if file_exists("/usr/local/rvmx") == 'true' {
-        debug_msg("warning", "OK")
-    } else {
-        debug_msg("alert", "ERROR")        
-    }
+    # if file_exists("/usr/local/rvmx") == 'true' {
+    #     debug_msg("warning", "OK")
+    # } else {
+    #     debug_msg("alert", "ERROR")        
+    # }
 
 
 
