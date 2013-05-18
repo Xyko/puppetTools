@@ -7,7 +7,7 @@ define tools::rpm::group($ensure = "present", $optional = false) {
          }
          exec { "Installing $name yum group":
             command => "yum -y groupinstall $pkg_types_arg $name --skip-broken",
-            unless => "yum -y groupinstall $pkg_types_arg $name --downloadonly --skip-broken",
+            unless 	=> "yum -y groupinstall $pkg_types_arg $name --skip-broken",
             timeout => 600,
          }
       }
