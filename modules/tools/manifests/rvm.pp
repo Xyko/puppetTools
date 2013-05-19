@@ -11,7 +11,7 @@ define tools::rvm (
 		'gemset create': 	{ $command = "rvm use ${ruby} && rvm gemset create ${gemset}" }
 		'gemset delete': 	{ $command = "rvm use ${ruby} && rvm --force gemset delete ${gemset}" }
 		'gem install': 		{ 
-			if $gemset == ''
+			if $gemset == '' {
 				$command = "rvm use ${ruby} && gem install ${gem}" 
 			} else {
 				$command = "rvm use ${ruby}@${gemset} && gem install ${gem}" 
