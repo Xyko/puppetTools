@@ -1,6 +1,8 @@
-define tools::rpm::yum($packlist,$version='') {
+define tools::rpm::yum($packlist,$version='lasted') {
 
-	notice $packlist
-	#$packlist.collect |$x| { nootice $x }
+	package { $packlist:
+	   ensure 	=> installed,
+	   version 	=> $version
+	}
 
 }

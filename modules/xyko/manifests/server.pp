@@ -50,9 +50,9 @@ class xyko::server inherits xyko::common {
 # tools::rpm::release { ant: version => 'latest' }
 # tools::rpm::release { ant: version => 'latest' }
 
-tools::rpm::yum {yum: packlist => ["gcc-c++","patch","readline"]}
-    #tools::rpm::group { "Development Tools":}
-    #tools::rpm::yum {yum: packlist => "gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel openssl-devel gcc ruby-devel libxml2 libxml2-devel libxslt libxslt-devel curl curl-devel libevent libevent-devel intltool gettext openssl-devel make bzip2 iconv-devel mysql mysql-server sqlite-devel mysql-devel mysql-client strace ntp puppet"}
+    tools::rpm::yum {yum: packlist => ["gcc-c++","patch","readline"]}
+    # tools::rpm::group { "Development Tools":}
+    # tools::rpm::yum {yum: packlist => "gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel openssl-devel gcc ruby-devel libxml2 libxml2-devel libxslt libxslt-devel curl curl-devel libevent libevent-devel intltool gettext openssl-devel make bzip2 iconv-devel mysql mysql-server sqlite-devel mysql-devel mysql-client strace ntp puppet"}
     # tools::rpm::local { transmission-common:  options => "--nogpgcheck", pack_name => 'transmission-common-2.04-2.fc14.1.x86_64.rpm' }
     # tools::rpm::local { transmission-gtk: options => "--nogpgcheck", pack_name => 'transmission-gtk-2.04-2.fc14.1.x86_64.rpm' }
 
