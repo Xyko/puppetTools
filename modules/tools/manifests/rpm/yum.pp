@@ -1,6 +1,6 @@
 define tools::rpm::yum($packlist,$version='') {
 
-	notice any2array($packlist)
-
+	notice $packlist
+	$packlist.collect |$x| { nootice $x }
 
 }
