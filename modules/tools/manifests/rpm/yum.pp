@@ -1,4 +1,4 @@
-define tools::rpm::yum(packlist,$version='') {
+define tools::rpm::yum($packlist,$version='') {
 
 	notice $packlist
 
