@@ -1,9 +1,6 @@
 define tools::rpm::yum($packlist,$version='') {
 
-	notice $packlist
+	notice $packlist.split
 
-	foreach $packname in $packlist {
-		notice $packname
-	}
 
 }
