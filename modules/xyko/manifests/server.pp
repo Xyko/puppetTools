@@ -44,17 +44,13 @@ class xyko::server inherits xyko::common {
  #        home_dir  => "/home/xyko",
     # }
 
-
-    tools::rpm::yum {yum1: packlist => ["gcc-c++","patch","readline","ImageMagick"]}
-    tools::rpm::yum {yum2: packlist => ["readline-devel","zlib","zlib-devel","libyaml-devel"]}
-    tools::rpm::yum {yum3: packlist => ["libffi-devel","openssl-devel","gcc","ruby-devel","libxml2","libxml2-devel","libxslt"]}
-    tools::rpm::yum {yum4: packlist => ["libxslt-devel","curl","curl-devel","libevent","libevent-devel","intltool"]}
-    tools::rpm::yum {yum5: packlist => ["mysql-server","sqlite-devel","mysql-devel","mysql-client","strace","ntp","puppet"]}
+    # tools::rpm::yum {yum1: packlist => ["gcc-c++","patch","readline","ImageMagick"]}
+    # tools::rpm::yum {yum2: packlist => ["readline-devel","zlib","zlib-devel","libyaml-devel"]}
+    # tools::rpm::yum {yum3: packlist => ["libffi-devel","openssl-devel","gcc","ruby-devel","libxml2","libxml2-devel","libxslt"]}
+    # tools::rpm::yum {yum4: packlist => ["libxslt-devel","curl","curl-devel","libevent","libevent-devel","intltool"]}
+    # tools::rpm::yum {yum5: packlist => ["mysql-server","sqlite-devel","mysql-devel","mysql-client","strace","ntp","puppet"]}
     tools::rpm::local { transmission-common:  options => "--nogpgcheck", pack_name => 'transmission-common-2.04-2.fc14.1.x86_64.rpm' }
-    tools::rpm::local { transmission-gtk: options => "--nogpgcheck", pack_name => 'transmission-gtk-2.04-2.fc14.1.x86_64.rpm' }
-
-
-
+    # tools::rpm::local { transmission-gtk: options => "--nogpgcheck", pack_name => 'transmission-gtk-2.04-2.fc14.1.x86_64.rpm' }
 
     # tools::archive::extract {"nginx-1.4.0":
     #     ensure      => present,
@@ -71,17 +67,18 @@ class xyko::server inherits xyko::common {
     #     recurse => true,
     # }
 
-    #tools::rvm { "rvm create": }
+    # tools::rvm { "rvm create": }
     # tools::rvm { "ruby install": ruby => "ruby-1.9.3-head" }
-    # tools::rvm { "rgem install": ruby => "", gem => "railsd" }
-    # tools::rvm { "rgem install": ruby => "", gem => "mechanized" }
-    # tools::rvm { "rgem install": ruby => "", gem => "unicornd" }
-    # tools::rvm { "rgem install": ruby => "", gem => "nokogirid" }
-    # tools::rvm { "rgem install": ruby => "", gem => "highlined" }
-    # tools::rvm { "rgem install": ruby => "", gem => "devised" }
-    # tools::rvm { "rgem install": ruby => "", gem => "hpricotd" }
-    # tools::rvm { "rgem install": ruby => "", gem => "mysql2d" }
-    # tools::rvm { "rgem install": ruby => "", gem => "rufus-schedulerd" }
+    # tools::rvm { "gem install": ruby => "", gem => "rails" }
+    # tools::rvm { "gem install": ruby => "", gem => "mechanize" }
+    # tools::rvm { "gem install": ruby => "", gem => "unicorn" }
+    # tools::rvm { "gem install": ruby => "", gem => "nokogiri" }
+    # tools::rvm { "gem install": ruby => "", gem => "highline" }
+    # tools::rvm { "gem install": ruby => "", gem => "devise" }
+    # tools::rvm { "gem install": ruby => "", gem => "hpricot" }
+    # tools::rvm { "gem install": ruby => "", gem => "mysql2" }
+    tools::rvm { "gem install": ruby => "ruby-1.9.3-head", gemset => "xyko" ,gem => "rufus-scheduler" }
+    tools::rvm { "gem install": ruby => "ruby-2.0.0-p195", gem => "rufus-scheduler" }
 
 
     # if file_exists("/usr/local/rvmx") == 'true' {

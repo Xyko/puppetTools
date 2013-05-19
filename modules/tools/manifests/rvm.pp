@@ -10,13 +10,20 @@ define tools::rvm (
 		'ruby remove': 		{ $command = "rvm remove 	${ruby}" }
 		'gemset create': 	{ $command = "rvm use ${ruby} && rvm gemset create ${gemset}" }
 		'gemset delete': 	{ $command = "rvm use ${ruby} && rvm --force gemset delete ${gemset}" }
-		'gem install': 		{ $command = "rvm use ${ruby} && gem install ${gem}" }
+		'gem install': 		{ 
+			if $gemset == ''
+				$command = "rvm use ${ruby} && gem install ${gem}" 
+			} else {
+				$command = "rvm use ${ruby}@${gemset} && gem install ${gem}" 
+			}
+		}
 		'rvm create': 		{ 
-			# if exists("/usr/local/rvmx") {
-			# 	$command = "curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby"
-			# } else {
-			# 	debug_msg("alert", "O RVM já está instalado.")
-			# }
+			if exists("/usr/local/rvm") {
+				$command = "curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby"
+			} else {
+				debug_msg("alert", "O RVM já está instalado.")
+				$command = ""
+			}
 		}
 		'rvm delete': 		{ $command = "rvm implode" }
 		default:  			{ $command = "" }
