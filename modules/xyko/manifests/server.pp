@@ -45,8 +45,8 @@ class xyko::server inherits xyko::common {
     # }
 
 
-    tools::rpm::yum {time(): packlist => ["gcc-c++","patch","readline","ImageMagick"]}
-    tools::rpm::yum {time(): packlist => ["readline-devel","zlib","zlib-devel","libyaml-devel"]}
+    tools::rpm::yum {yum1: packlist => ["gcc-c++","patch","readline","ImageMagick"]}
+    tools::rpm::yum {yum2: packlist => ["readline-devel","zlib","zlib-devel","libyaml-devel"]}
     tools::rpm::yum {yum3: packlist => ["libffi-devel","openssl-devel","gcc","ruby-devel","libxml2","libxml2-devel","libxslt"]}
     tools::rpm::yum {yum4: packlist => ["libxslt-devel","curl","curl-devel","libevent","libevent-devel","intltool"]}
     tools::rpm::yum {yum5: packlist => ["mysql-server","sqlite-devel","mysql-devel","mysql-client","strace","ntp","puppet"]}
