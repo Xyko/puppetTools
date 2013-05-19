@@ -1,5 +1,8 @@
-define tools::rpm::yum($version='') {
+define tools::rpm::yum(packlist,$version='') {
 
-	notice $name
+	notice $packlist
+
+	foreach $packname $packlist {
+	}
 
 }
