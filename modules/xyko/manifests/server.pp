@@ -1,7 +1,6 @@
 class xyko::server inherits xyko::common {
 
-#curl -s -v http://sde.admin.globoi.com/admin/aaa/sync
-
+        #curl -s -v http://sde.admin.globoi.com/admin/aaa/sync
         # after initial install 
         # yum list updates
         # yum update
@@ -16,7 +15,21 @@ class xyko::server inherits xyko::common {
         # yum groupinstall "Development tools"
         # yum install -y puppet
         # 
+        # mkdir /opt/puppet
+        # chown puppet: /opt/puppet
+        # editar /etc/passwd para puppet:x:52:52:Puppet:/opt/puppet:/bin/bash 
+        # mkdir .ssh
+        # ssh-keygen -t rsa
+        # git clone git@github.com:Xyko/puppetTools.git
 
+    tools::users::create { "xyko":
+        usuario     => "xyko",
+        grupo       => "xyko",
+        uid         => "10000",
+        gid         => "10000",
+        password    => "fc4vbRND",
+        home_dir  => "/home/xyko",
+    }
 
     tools::rpm::yum {yum1: packlist => ["git","gcc-c++","patch","readline","ImageMagick"]}
     tools::rpm::yum {yum2: packlist => ["readline-devel","zlib","zlib-devel","libyaml-devel"]}
