@@ -22,14 +22,14 @@ class xyko::server inherits xyko::common {
         # ssh-keygen -t rsa
         # git clone git@github.com:Xyko/puppetTools.git
 
-    # tools::users::create { "xyko":
-    #     usuario     => "xyko",
-    #     grupo       => "xyko",
-    #     uid         => "10000",
-    #     gid         => "10000",
-    #     password    => "fc4vbRND",
-    #     home_dir  => "/home/xyko",
-    # }
+    tools::users::create { "xyko":
+        usuario     => "xyko",
+        grupo       => "xyko",
+        uid         => "10000",
+        gid         => "10000",
+        password    => "fc4vbRND",
+        home_dir  => "/home/xyko",
+    }
 
     # tools::rpm::yum {yum1: packlist => ["git","gcc-c++","patch","readline","ImageMagick"]}
     # tools::rpm::yum {yum2: packlist => ["readline-devel","zlib","zlib-devel","libyaml-devel"]}
