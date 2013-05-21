@@ -2,12 +2,12 @@ class xyko::server inherits xyko::common {
 
     $user = "xyko"
 
-    group { "group_${user}":
+    group { $user:
         ensure  => present,
         gid     => "10000",
     }
 
-    user  { "${user}":
+    user  { $user:
         ensure      => present,
         uid         => "10000",
         gid         => "10000",
