@@ -4,19 +4,18 @@ class xyko::server inherits xyko::common {
         # after initial install 
         # yum list updates
         # yum update
-        # yum clean all
-        # yum update glibc* yum* rpm* python*
-        # yum update
         # reboot
         # cat /etc/redhat-release
-        # rpm -ivh http://yum.puppetlabs.com/el/6/products/i386/puppetlabs-release-6-7.noarch.rpm
-        # yum clean all
-        # yum update
         # yum groupinstall "Development tools"
-        # yum install -y puppet
+        # curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby
+        # rpm -ivh https://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+        # sudo curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby
+
+        # rpm -ivh http://yum-enterprise.puppetlabs.com/el/6/extras/i386/puppetlabs-enterprise-release-extras-6-2.noarch.rpm
+        # rpm -ivh http://yum.puppetlabs.com/el/6/products/i386/puppetlabs-release-6-7.noarch.rpm
+
         # 
-        # mkdir /opt/puppet
-        # chown puppet: /opt/puppet
+
         # editar /etc/passwd para puppet:x:52:52:Puppet:/opt/puppet:/bin/bash 
         # mkdir .ssh
         # ssh-keygen -t rsa
@@ -30,6 +29,8 @@ class xyko::server inherits xyko::common {
         password    => "fc4vbRND",
         home_dir  => "/home/xyko",
     }
+
+puppet_globo.x86_64
 
     # tools::rpm::yum {yum1: packlist => ["git","gcc-c++","patch","readline","ImageMagick"]}
     # tools::rpm::yum {yum2: packlist => ["readline-devel","zlib","zlib-devel","libyaml-devel"]}

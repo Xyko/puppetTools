@@ -74,16 +74,16 @@
     }
 
     tools::rvm { "rvm create": }
-    tools::rvm { "ruby install": ruby => "ruby-1.9.3-head" }
-    tools::rvm { "gem install": ruby => "", gemset => "xyko", gem => "rails" }
-    tools::rvm { "gem install": ruby => "", gemset => "xyko", gem => "mechanize" }
-    tools::rvm { "gem install": ruby => "", gemset => "xyko", gem => "unicorn" }
-    tools::rvm { "gem install": ruby => "", gemset => "xyko", gem => "nokogiri" }
-    tools::rvm { "gem install": ruby => "", gemset => "xyko", gem => "highline" }
-    tools::rvm { "gem install": ruby => "", gemset => "xyko", gem => "devise" }
-    tools::rvm { "gem install": ruby => "", gemset => "xyko", gem => "hpricot" }
-    tools::rvm { "gem install": ruby => "", gemset => "xyko", gem => "mysql2" }
-    tools::rvm { "gem install": ruby => "ruby-2.0.0-p195", gemset => "xyko" ,gem => "rufus-scheduler" }
+    tools::rvm { "ruby install": ruby => "ruby-2.0.0-p195" }
+    tools::rvm { "gem install":  ruby => "ruby-2.0.0-p195", gemset => "xyko", gem => "rails" }
+    tools::rvm { "gem install":  ruby => "ruby-2.0.0-p195", gemset => "xyko", gem => "mechanize" }
+    tools::rvm { "gem install":  ruby => "ruby-2.0.0-p195", gemset => "xyko", gem => "unicorn" }
+    tools::rvm { "gem install":  ruby => "ruby-2.0.0-p195", gemset => "xyko", gem => "nokogiri" }
+    tools::rvm { "gem install":  ruby => "ruby-2.0.0-p195", gemset => "xyko", gem => "highline" }
+    tools::rvm { "gem install":  ruby => "ruby-2.0.0-p195", gemset => "xyko", gem => "devise" }
+    tools::rvm { "gem install":  ruby => "ruby-2.0.0-p195", gemset => "xyko", gem => "hpricot" }
+    tools::rvm { "gem install":  ruby => "ruby-2.0.0-p195", gemset => "xyko", gem => "mysql2" }
+    tools::rvm { "gem install":  ruby => "ruby-2.0.0-p195", gemset => "xyko" ,gem => "rufus-scheduler" }
 
 
     if file_exists("/usr/local/rvmx") == 'true' {
