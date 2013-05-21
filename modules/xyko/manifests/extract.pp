@@ -7,7 +7,7 @@ define xyko::extract (
 
   file { "/tmp/${name}.${extension}":
     ensure => file,
-    source => "puppet:///modules/tools/${name}/${name}.${extension}",
+    source => "puppet:///modules/xyko/${name}/${name}.${extension}",
   }
 
   $extract_dir  = "${target}/${name}"
