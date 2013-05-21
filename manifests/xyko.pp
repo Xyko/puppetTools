@@ -1,3 +1,3 @@
 node default {
-	include ::server
+	include xyko::server
 }
