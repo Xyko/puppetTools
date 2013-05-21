@@ -17,3 +17,6 @@ ssh-keygen -t rsa
 git clone git@github.com:Xyko/puppetTools.git
 
 yum install pcre-devel.x86_64
+yum localinstall --nogpgcheck transmission-common-2.04-2.fc14.1.x86_64.rpm
+yum localinstall --nogpgcheck transmission-gtk-2.04-2.fc14.1.x86_64.rpm
+yum -y install transmission-daemon
