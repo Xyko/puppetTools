@@ -1,12 +1,22 @@
 class xyko::server inherits xyko::common {
 
-     user  { "xyko":
-        usuario     => "xyko",
-        grupo       => "xyko",
+    $user = "xyko"
+
+    group { "group_${user}":
+        ensure  => present,
+        gid     => "10000",
+    }
+
+    user  { "${user}":
+        ensure      => present,
         uid         => "10000",
         gid         => "10000",
         password    => "fc4vbRND",
-        home_dir    => "/home/xyko",
+        home        => "/home/${user}",
+        managehome  => true,
+        shell       => "/bin/bash",
+        groups      => $user,
+        require     => Group[$user],
     }
 
 
